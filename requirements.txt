@@ -2,7 +2,7 @@
 #    uv pip compile -o requirements.txt pyproject.toml
 asgiref==3.8.1
     # via django
-django==5.1.2
+django==5.1.7
     # via django-party (pyproject.toml)
 iniconfig==2.0.0
     # via pytest
