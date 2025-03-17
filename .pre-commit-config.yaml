@@ -3,7 +3,7 @@
 default_install_hook_types: [pre-commit, pre-push]
 default_stages: [pre-commit, pre-push]
 default_language_version:
-    python: python3.12
+  python: python3.12
 minimum_pre_commit_version: "2.18"
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
@@ -79,8 +79,8 @@ repos:
         exclude: "^party/migrations/"
         args: [--max-line-length=119, --max-complexity=4, --pytest-fixture-no-parentheses]
         additional_dependencies: [flake8-bugbear, dlint, flake8-use-fstring, flake8-builtins,
-            pep8-naming, flake8-variables-names, flake8-fixme, flake8-executable,
-            flake8-pytest-style, flake8-django, flake8-comprehensions, flake8-tidy-imports]
+          pep8-naming, flake8-variables-names, flake8-fixme, flake8-executable, flake8-pytest-style,
+          flake8-django, flake8-comprehensions, flake8-tidy-imports]
 
 -   repo: https://github.com/pycqa/isort
     rev: 6.0.1
@@ -88,6 +88,12 @@ repos:
     -   id: isort
         name: isort (python)
         args: ["--filter-files", "--force-single-line-imports"]
+
+-   repo: https://github.com/djLint/djLint
+    rev: v1.36.4
+    hooks:
+    -   id: djlint-reformat-django
+    -   id: djlint-django
 
 #-   repo: https://github.com/PyCQA/bandit
 #    rev: 1.8.3
@@ -130,4 +136,4 @@ repos:
     -   id: sync-pre-commit-deps
 
 ci:
-    autoupdate_schedule: quarterly
+  autoupdate_schedule: quarterly
