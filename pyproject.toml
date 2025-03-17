@@ -8,3 +8,6 @@ dependencies = [
   'django==5.1.2',
   "pytest-django>=4.10.0",
 ]
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "core.settings"
+python_files = "tests.py test_*.py"
