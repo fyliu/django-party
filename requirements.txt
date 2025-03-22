@@ -4,12 +4,20 @@ asgiref==3.8.1
     # via
     #   django
     #   django-browser-reload
+crispy-bootstrap4==2024.10
+    # via django-party (pyproject.toml)
 django==5.1.7
     # via
     #   django-party (pyproject.toml)
+    #   crispy-bootstrap4
     #   django-browser-reload
+    #   django-crispy-forms
 django-browser-reload==1.18.0
     # via django-party (pyproject.toml)
+django-crispy-forms==2.3
+    # via
+    #   django-party (pyproject.toml)
+    #   crispy-bootstrap4
 iniconfig==2.0.0
     # via pytest
 packaging==24.2
