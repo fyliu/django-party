@@ -19,4 +19,10 @@ party_detail_urlpatterns = [
     ),
 ]
 
-urlpatterns = list_parties_urlpatterns + party_detail_urlpatterns
+new_party_urlpatterns = [
+    path("party/new/", views.page_new_party, name="page_new_party"),
+]
+
+urlpatterns = (
+    list_parties_urlpatterns + party_detail_urlpatterns + new_party_urlpatterns
+)
