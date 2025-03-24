@@ -1,3 +1,6 @@
+from .gift_registry_views import GiftDetailPartial
+from .gift_registry_views import GiftRegistryPage
+from .gift_registry_views import GiftUpdateFormPartial
 from .new_party_views import page_new_party
 from .new_party_views import partial_check_invitation
 from .new_party_views import partial_check_party_date
@@ -6,6 +9,9 @@ from .party_details_views import PartyDetailPartial
 from .party_list_views import PartyListPage
 
 __all__ = [
+    "GiftRegistryPage",
+    "GiftUpdateFormPartial",
+    "GiftDetailPartial",
     "PartyDetailPage",
     "PartyDetailPartial",
     "PartyListPage",
