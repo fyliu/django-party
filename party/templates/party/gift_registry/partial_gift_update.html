@@ -10,6 +10,9 @@
         <button type="submit">Save</button>
     </div>
     <div class="table-cell py-4 px-6">
-        <button type="button">Cancel</button>
+        <button type="button"
+                hx-get="{% url 'partial_gift_detail' gift.uuid %}"
+                hx-target="closest form"
+                hx-swap="outerHTML">Cancel</button>
     </div>
 </form>
