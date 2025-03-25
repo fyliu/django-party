@@ -10,6 +10,7 @@ dependencies = [
   "django-browser-reload>=1.18.0",
   "django-crispy-forms>=2.3",
   "pytest-django>=4.10.0",
+  "rust-just>=1.40.0",
 ]
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "core.settings"
