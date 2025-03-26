@@ -1,5 +1,6 @@
 alias t := test
 alias c := check
+alias e := export-requirements
 alias rf := run-frontend
 alias rb := run-backend
 
@@ -22,6 +23,9 @@ run-frontend:
 
 run-backend:
   python manage.py runserver
+
+export-requirements:
+  uv pip compile -o requirements.txt pyproject.toml
 
 pwd:
   echo {{invocation_directory()}}
