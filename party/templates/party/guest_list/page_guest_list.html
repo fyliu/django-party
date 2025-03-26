@@ -1,0 +1,13 @@
+{% extends "party/base.html" %}
+{% block content %}
+    <div class="w-2/5 bg-white shadow-md m-auto">
+        <form class="table text-left text-gray-500 table-fixed min-w-fit p-8"
+              id="guest-form">
+            <div class="table-row-group" id="guests">{% include "party/guest_list/partial_guest_list.html" %}</div>
+        </form>
+        <div class="bg-gray-50 grid grid-cols-2">
+            <button class="p-5 uppercase text-sm" type="button">Not attending</button>
+            <button class="p-5 uppercase text-sm" type="button">Attending</button>
+        </div>
+    </div>
+{% endblock content %}

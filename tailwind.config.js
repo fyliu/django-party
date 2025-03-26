@@ -5,6 +5,9 @@ module.exports = {
     './party/static/party/js/**/*.js',
     './party/static/party/src/**/*.css',
   ],
+  safelist: [
+    'bg-green-800',
+  ],
   theme: {
     fontFamily: {
       sans: ["Roboto"] // setting the default font-family
