@@ -4,6 +4,10 @@ alias e := export-requirements
 alias rf := run-frontend
 alias rb := run-backend
 
+# global
+alias ga := git-add
+alias l := lazygit
+
 #default: check test
 default:
   just --list
@@ -26,6 +30,16 @@ run-backend:
 
 export-requirements:
   uv pip compile -o requirements.txt pyproject.toml
+
+
+## global commands ##
+
+# stage all changes
+git-add:
+  git add -A
+
+lazygit:
+  lazygit
 
 pwd:
   echo {{invocation_directory()}}
