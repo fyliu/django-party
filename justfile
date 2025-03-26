@@ -18,15 +18,17 @@ test:
   python -m pytest $@
 
 # lint
+[positional-arguments]
 check:
-  pre-commit
+  pre-commit $@
 
 
 run-frontend:
   npm run tailwind:dev
 
+[positional-arguments]
 run-backend:
-  python manage.py runserver
+  python manage.py runserver $@
 
 export-requirements:
   uv pip compile -o requirements.txt pyproject.toml
