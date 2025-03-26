@@ -4,6 +4,7 @@ from .gift_registry_views import GiftRegistryPage
 from .gift_registry_views import GiftUpdateFormPartial
 from .gift_registry_views import delete_gift_partial
 from .guest_list_views import GuestListPage
+from .guest_list_views import filter_guests_partial
 from .guest_list_views import mark_attending_partial
 from .guest_list_views import mark_not_attending_partial
 from .new_party_views import page_new_party
@@ -20,6 +21,7 @@ __all__ = [
     "GiftUpdateFormPartial",
     "delete_gift_partial",
     "GuestListPage",
+    "filter_guests_partial",
     "mark_attending_partial",
     "mark_not_attending_partial",
     "page_new_party",
