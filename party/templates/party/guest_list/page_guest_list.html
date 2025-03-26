@@ -5,9 +5,15 @@
               id="guest-form">
             <div class="table-row-group" id="guests">{% include "party/guest_list/partial_guest_list.html" %}</div>
         </form>
-        <div class="bg-gray-50 grid grid-cols-2">
-            <button class="p-5 uppercase text-sm" type="button">Not attending</button>
-            <button class="p-5 uppercase text-sm" type="button">Attending</button>
+        <div hx-include="#guests"
+             hx-target="#guests"
+             class="bg-gray-50 grid grid-cols-2">
+            <button class="p-5 uppercase text-sm"
+                    type="button"
+                    hx-put="{% url 'partial_mark_not_attending' party_id %}">Not attending</button>
+            <button class="p-5 uppercase text-sm"
+                    type="button"
+                    hx-put="{% url 'partial_mark_attending' party_id %}">Attending</button>
         </div>
     </div>
 {% endblock content %}
