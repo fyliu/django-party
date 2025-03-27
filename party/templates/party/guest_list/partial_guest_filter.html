@@ -1,4 +1,6 @@
-<form hx-post="{% url 'partial_filter_guests' party_id %}"
+<form id="guest_filter_form"
+      hx-swap-oob="true"
+      hx-post="{% url 'partial_filter_guests' party_id %}"
       hx-trigger="keyup delay:500ms from:#guest_search, search, change from:#attending_filter"
       hx-target="#guests">
     <div class="bg-gray-50 p-4 grid grid-cols-2">
