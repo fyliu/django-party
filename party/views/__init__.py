@@ -1,3 +1,4 @@
+from .general_views import LoginPage
 from .gift_registry_views import GiftCreateFormPartial
 from .gift_registry_views import GiftDetailPartial
 from .gift_registry_views import GiftRegistryPage
@@ -30,4 +31,5 @@ __all__ = [
     "PartyDetailPage",
     "PartyDetailPartial",
     "PartyListPage",
+    "LoginPage",
 ]

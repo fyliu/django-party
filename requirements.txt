@@ -3,32 +3,60 @@
 asgiref==3.8.1
     # via
     #   django
+    #   django-allauth
     #   django-browser-reload
+certifi==2025.1.31
+    # via requests
+cffi==1.17.1
+    # via cryptography
+charset-normalizer==3.4.1
+    # via requests
 crispy-bootstrap4==2024.10
     # via django-party (pyproject.toml)
+cryptography==44.0.2
+    # via pyjwt
 django==5.1.7
     # via
     #   django-party (pyproject.toml)
     #   crispy-bootstrap4
+    #   django-allauth
     #   django-browser-reload
     #   django-crispy-forms
+django-allauth==65.6.0
+    # via django-party (pyproject.toml)
 django-browser-reload==1.18.0
     # via django-party (pyproject.toml)
 django-crispy-forms==2.3
     # via
     #   django-party (pyproject.toml)
     #   crispy-bootstrap4
+idna==3.10
+    # via requests
 iniconfig==2.0.0
     # via pytest
+oauthlib==3.2.2
+    # via requests-oauthlib
 packaging==24.2
     # via pytest
 pluggy==1.5.0
     # via pytest
+pycparser==2.22
+    # via cffi
+pyjwt==2.10.1
+    # via django-allauth
 pytest==8.3.5
     # via pytest-django
 pytest-django==4.10.0
     # via django-party (pyproject.toml)
+requests==2.32.3
+    # via
+    #   django-allauth
+    #   requests-oauthlib
+requests-oauthlib==2.0.0
+    # via django-allauth
 rust-just==1.40.0
     # via django-party (pyproject.toml)
 sqlparse==0.5.3
     # via django
+urllib3==2.3.0
+    # via requests
