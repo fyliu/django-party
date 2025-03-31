@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
     "allauth.socialaccount.providers.facebook",
+    "allauth.socialaccount.providers.amazon_cognito",
     "django_browser_reload",
     "crispy_forms",
     "crispy_bootstrap4",
@@ -149,3 +150,10 @@ ACCOUNT_EMAIL_VERIFICATION = "none"  # no email verification needed
 SOCIALACCOUNT_LOGIN_ON_GET = True  # skip additional confirm page, less secure
 ACCOUNT_LOGOUT_ON_GET = True  # skip the confirm logout page
 ACCOUNT_UNIQUE_EMAIL = True
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    "amazon_cognito": {
+        "DOMAIN": "https://hackforla-vrms-dev.auth.us-west-2.amazoncognito.com",
+    }
+}
