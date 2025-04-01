@@ -33,6 +33,8 @@ run-backend:
 export-requirements:
   uv pip compile -o requirements.txt pyproject.toml
 
+run-e2e:
+  npx cypress run
 
 ## global commands ##
 

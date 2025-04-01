@@ -26,7 +26,8 @@
                     class="uppercase text-sm text-gray-700"
                     hx-target="#gift-registry .table-row-group"
                     hx-swap="beforeend"
-                    hx-get="{% url "partial_new_gift" party.uuid %}">Add gift</button>
+                    hx-get="{% url "partial_new_gift" party.uuid %}"
+                    data-cy="add-gift-button">Add gift</button>
         </div>
     </div>
 {% endblock content %}
