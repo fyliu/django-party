@@ -10,8 +10,10 @@ dependencies = [
   "django-allauth[socialaccount]>=65.6.0",
   "django-browser-reload>=1.18.0",
   "django-crispy-forms>=2.3",
+  "django-environ>=0.12.0",
   "pytest-django>=4.10.0",
   "rust-just>=1.40.0",
+  "whitenoise>=6.9.0",
 ]
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "core.settings"
