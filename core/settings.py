@@ -10,8 +10,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-import os
 from pathlib import Path
+
+import environ
+
+env = environ.Env(
+    DEBUG=(bool, False),
+    SECRET_KEY=(str, "secret_key"),
+    DJANGO_ALLOWED_HOSTS=(str, "127.0.0.1 localhost [::1]"),
+    CSRF_TRUSTED_ORIGINS=(str, "http://127.0.0.1:8000 http://localhost:8000"),
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,17 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get(
-    "SECRET_KEY", default="kBgoJ0EhN6OvJiu4zk8EU5dJPat0z9hb5PCszVKNb0U"
-)
-DEBUG = int(os.environ.get("DEBUG", default=0))
-ALLOWED_HOSTS = os.environ.get(
-    "DJANGO_ALLOWED_HOSTS", default="127.0.0.1 localhost [::1]"
-).split(" ")
+SECRET_KEY = env("SECRET_KEY")
+DEBUG = env("DEBUG")
+ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS").split(" ")
 
-CSRF_TRUSTED_ORIGINS = os.environ.get(
-    "CSRF_TRUSTED_ORIGINS", default="http://127.0.0.1:8000 http://localhost:8000"
-).split(" ")
+CSRF_TRUSTED_ORIGINS = env("CSRF_TRUSTED_ORIGINS").split(" ")
 
 # Application definition
 
@@ -41,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "whitenoise.runserver_nostatic",
     "django.contrib.sites",
     "allauth",
     "allauth.account",
@@ -56,6 +59,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -160,4 +164,12 @@ SOCIALACCOUNT_PROVIDERS = {
     "amazon_cognito": {
         "DOMAIN": "https://hackforla-vrms-dev.auth.us-west-2.amazoncognito.com",
     }
+}
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
 }

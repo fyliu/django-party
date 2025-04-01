@@ -176,3 +176,4 @@ cython_debug/
 node_modules
 .envrc
 cypress.env.json
+.env
