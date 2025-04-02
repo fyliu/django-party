@@ -45,6 +45,21 @@ git-add:
 lazygit:
   lazygit
 
+docker-build:
+  docker build . -t party_organizer
+
+docker-run:
+  docker run -p 8000:8000 --name party_app -e PORT=8000 -d --rm party_organizer
+
+docker-stop:
+  docker stop party_app
+
+dc-up:
+  docker-compose up -d
+
+dc-down:
+  docker-compose down
+
 pwd:
   echo {{invocation_directory()}}
   echo {{justfile_directory()}}
