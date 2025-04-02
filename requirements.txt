@@ -15,10 +15,13 @@ crispy-bootstrap4==2024.10
     # via django-party (pyproject.toml)
 cryptography==44.0.2
     # via pyjwt
+dj-database-url==2.3.0
+    # via django-party (pyproject.toml)
 django==5.1.7
     # via
     #   django-party (pyproject.toml)
     #   crispy-bootstrap4
+    #   dj-database-url
     #   django-allauth
     #   django-browser-reload
     #   django-crispy-forms
@@ -46,6 +49,10 @@ packaging==24.2
     #   pytest
 pluggy==1.5.0
     # via pytest
+psycopg==3.2.6
+    # via django-party (pyproject.toml)
+psycopg-binary==3.2.6
+    # via django-party (pyproject.toml)
 pycparser==2.22
     # via cffi
 pyjwt==2.10.1
@@ -64,6 +71,10 @@ rust-just==1.40.0
     # via django-party (pyproject.toml)
 sqlparse==0.5.3
     # via django
+typing-extensions==4.13.0
+    # via
+    #   dj-database-url
+    #   psycopg
 urllib3==2.3.0
     # via requests
 whitenoise==6.9.0
