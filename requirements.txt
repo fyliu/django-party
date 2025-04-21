@@ -17,7 +17,7 @@ cryptography==44.0.2
     # via pyjwt
 dj-database-url==2.3.0
     # via django-party (pyproject.toml)
-django==5.1.7
+django==5.1.8
     # via
     #   django-party (pyproject.toml)
     #   crispy-bootstrap4
