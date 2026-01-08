@@ -25,7 +25,7 @@ django==5.1.7
     #   django-allauth
     #   django-browser-reload
     #   django-crispy-forms
-django-allauth==65.6.0
+django-allauth==65.13.0
     # via django-party (pyproject.toml)
 django-browser-reload==1.18.0
     # via django-party (pyproject.toml)
