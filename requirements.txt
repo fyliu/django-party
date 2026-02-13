@@ -13,7 +13,7 @@ charset-normalizer==3.4.1
     # via requests
 crispy-bootstrap4==2024.10
     # via django-party (pyproject.toml)
-cryptography==44.0.2
+cryptography==46.0.5
     # via pyjwt
 dj-database-url==2.3.0
     # via django-party (pyproject.toml)
