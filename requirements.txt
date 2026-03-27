@@ -69,7 +69,7 @@ requests-oauthlib==2.0.0
     # via django-allauth
 rust-just==1.40.0
     # via django-party (pyproject.toml)
-sqlparse==0.5.3
+sqlparse==0.5.4
     # via django
 typing-extensions==4.13.0
     # via
